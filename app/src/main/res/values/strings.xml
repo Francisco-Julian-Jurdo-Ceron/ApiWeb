@@ -5,4 +5,16 @@
         <item>Ver Tráfico</item>
         <item>Opciones</item>
     </string-array>
+    <string-array name="array_nombre_Conductores">
+        <item>Wye Warcup  236-57-7592</item>
+        <item>Shirline Keelin 384-07-9969</item>
+        <item>Madalyn Hinchcliffe 123-14-4660</item>
+        <item>Clair Lambdon 477-92-9173</item>
+        <item>Cherri Hanway 738-41-0181</item>
+    </string-array>
+    <string-array name="array_opciones">
+        <item>Mi Perfil</item>
+        <item>Mis Pagos</item>
+        <item>Cerrar Sesión</item>
+    </string-array>
 </resources>

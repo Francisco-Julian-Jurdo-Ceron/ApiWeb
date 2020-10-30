@@ -29,6 +29,18 @@ public class MenuActivity extends AppCompatActivity{
         ArrayAdapter <String> arrayAdapter = new ArrayAdapter<>(this, R.layout.list_item, list);
         listMenu.setAdapter(arrayAdapter);
 
+        listMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+
+                String listChoice  = (listMenu.getItemAtPosition (position)).toString();
+                Intent i = new Intent(view.getContext(), SubMenu.class);
+                i.putExtra("Category", position);
+                i.putExtra("nameCategory",listChoice);
+                startActivity(i);
+            }
+        });
+
     }
 
 }
