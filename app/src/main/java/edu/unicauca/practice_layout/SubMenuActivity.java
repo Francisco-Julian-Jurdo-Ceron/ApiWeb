@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class SubMenu extends AppCompatActivity {
+public class SubMenuActivity extends AppCompatActivity {
 
     private ListView listSubCategory;
     private TextView categories;

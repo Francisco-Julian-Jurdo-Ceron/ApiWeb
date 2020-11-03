@@ -1,31 +1,65 @@
 package edu.unicauca.practice_layout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-
 import android.os.Bundle;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
+    private ListView listMenu;
+    private ImageButton scannerQr;
     private Button buttonInicio;
+    private TextView labelRegistro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonInicio = (Button)findViewById(R.id.buttonLogin);
+        String[] list = getResources().getStringArray(R.array.array_menu);
+        listMenu = (ListView)findViewById(R.id.listM);
+        scannerQr = (ImageButton)findViewById(R.id.bt_qr);
+        buttonInicio = (Button)findViewById(R.id.btn_login);
+        labelRegistro = (TextView)findViewById(R.id.labelRegistro);
+
+        ArrayAdapter <String> arrayAdapter = new ArrayAdapter<>(this, R.layout.list_item, list);
+        listMenu.setAdapter(arrayAdapter);
+
+        listMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+
+                String listChoice  = (listMenu.getItemAtPosition (position)).toString();
+                Intent i = new Intent(view.getContext(), SubMenuActivity.class);
+                i.putExtra("Category", position);
+                i.putExtra("nameCategory",listChoice);
+                startActivity(i);
+            }
+        });
 
         buttonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),MenuActivity.class);
+                Intent i = new Intent(getApplicationContext(), InicioSActivity.class);
                 startActivity(i);
             }
         });
+
+        labelRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
+
 }
