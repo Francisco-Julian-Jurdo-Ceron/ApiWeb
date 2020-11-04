@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "476784371317",
+    "firebase_url": "https://huck-c7065.firebaseio.com",
+    "project_id": "huck-c7065",
+    "storage_bucket": "huck-c7065.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476784371317:android:f209336a4d3dc2ed79ba3c",
+        "android_client_info": {
+          "package_name": "edu.unicauca.practice_layout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476784371317-b5dku3had3rhja16jpndvmkairretpev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9jKHx-ml0MsULDHFL4OTHCNjKwg2wb_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476784371317-b5dku3had3rhja16jpndvmkairretpev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
