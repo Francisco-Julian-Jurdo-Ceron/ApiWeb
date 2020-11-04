@@ -30,24 +30,18 @@ public class SubMenuActivity extends AppCompatActivity {
         Intent i = getIntent();
         datos = i.getExtras();
         positionMain = datos.getInt("Category");
-        String title=(datos.getString("nameCategory"));
+        title=(datos.getString("nameCategory"));
         selection(positionMain);
     }
 
     private void selection (int posicion){
 
-        if (posicion == 0){
+        if (posicion == 1){
             categories.setText(title);
             Subtitle.setText("Conductores Disponibles");
             String subCategory []= getResources().getStringArray(R.array.array_nombre_Conductores);
             ArrayAdapter <String> arrayAdapter = new ArrayAdapter<>(this, R.layout.list_item, subCategory);
             listSubCategory.setAdapter(arrayAdapter);
-        }else if (posicion == 1){
-            categories.setText(title);
-            Subtitle.setText("Rutas Opcionales");
-            //String subCategory []= getResources().getStringArray(R.array.array_Trigonometría);
-            //ArrayAdapter <String> arrayAdapter = new ArrayAdapter<>(this, R.layout.list_item, subCategory);
-            //listSubCategory.setAdapter(arrayAdapter);
         }else if(posicion == 2){
             categories.setText(title);
             Subtitle.setText("");

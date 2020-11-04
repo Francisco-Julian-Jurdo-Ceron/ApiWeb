@@ -37,11 +37,17 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){
 
-                String listChoice  = (listMenu.getItemAtPosition (position)).toString();
-                Intent i = new Intent(view.getContext(), SubMenuActivity.class);
-                i.putExtra("Category", position);
-                i.putExtra("nameCategory",listChoice);
-                startActivity(i);
+                if(position==0){
+                    Intent i = new Intent(view.getContext(), MapsActivity.class);
+                    startActivity(i);
+                }else {
+
+                    String listChoice = (listMenu.getItemAtPosition(position)).toString();
+                    Intent i = new Intent(view.getContext(), SubMenuActivity.class);
+                    i.putExtra("Category", position);
+                    i.putExtra("nameCategory", listChoice);
+                    startActivity(i);
+                }
             }
         });
 

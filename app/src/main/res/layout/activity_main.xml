@@ -68,32 +68,32 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="48dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="400dp"
+        android:id="@+id/imgMaps"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="360dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/traffic" />
+        app:srcCompat="@drawable/maps" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="51dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="356dp"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="400dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/service" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="44dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="468dp"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="440dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/options" />
