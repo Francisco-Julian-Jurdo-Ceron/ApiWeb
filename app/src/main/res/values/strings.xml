@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">App Hack</string>
+    <string name="scan_canceled">Has cancelado el escaner</string>
     <string-array name="array_menu">
         <item>Solicitar Servicio</item>
         <item>Ver Tráfico</item>
