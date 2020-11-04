@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=2A:2D:E6:F9:C0:C4:42:F3:BE:6E:95:38:65:D9:84:2D:63:57:4B:B5%3Bedu.unicauca.practice_layout
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    edu.unicauca.practice_layout
+
+    SHA-1 certificate fingerprint:
+    2A:2D:E6:F9:C0:C4:42:F3:BE:6E:95:38:65:D9:84:2D:63:57:4B:B5
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC9jKHx-ml0MsULDHFL4OTHCNjKwg2wb_0</string>
+</resources>
