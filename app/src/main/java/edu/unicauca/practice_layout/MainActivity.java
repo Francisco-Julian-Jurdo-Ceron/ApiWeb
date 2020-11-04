@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -60,6 +61,31 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+        scannerQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addQR();
+            }
+        });
+    }
+
+    private void addQR() {
+        IntentIntegrator integrator = new IntentIntegrator(this);
+        integrator.initiateScan();
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode == RESULT_OK) {
+            IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+            if (scanResult != null) {
+                Intent i = new Intent(getApplicationContext(), ScannerqrActivity.class);
+                i.putExtra("textqr", scanResult.getContents());
+                startActivity(i);
+            }
+        } else if (resultCode == RESULT_CANCELED) {
+            Toast.makeText(this, R.string.scan_canceled, Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
